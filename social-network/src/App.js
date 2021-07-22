@@ -20,10 +20,10 @@ function App(props) {
         <Route exact path="/profile"component={Profile}/> */}
 
         <Route exact path="/dialogs" 
-                    render={ () => <Dialogs state={props.state.dialogsPage} />}/>
+                    render={ () => <Dialogs store={props.store} />}/>
 
         <Route exact path="/profile" 
-                    render={ () => <Profile state={props.state.profilePage} addPost={props.addPost}/>}/>
+                    render={ () => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch}/>}/>
         
       </div>
       
